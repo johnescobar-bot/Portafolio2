@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio 2 - John Escobar</title>
+    <title>Portafolio - John Escobar</title>
     <style>
         :root {
             --primary: #00d4ff;
@@ -51,6 +51,7 @@
             flex-direction: column;
             box-shadow: 0 15px 35px rgba(0,0,0,0.6);
             border: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 50px; /* Separación entre proyectos */
         }
 
         @media (min-width: 900px) {
@@ -59,9 +60,7 @@
 
         .image-box {
             flex: 1;
-            /* Se ha ajustado la altura mínima para el contenedor de la imagen en móviles */
-            min-height: 300px; 
-            /* Fondo negro para rellenar si la imagen no coincide con las proporciones */
+            min-height: 350px; 
             background-color: #000; 
             display: flex;
             align-items: center;
@@ -70,13 +69,11 @@
 
         @media (min-width: 900px) {
             .image-box {
-                /* Altura mínima ajustada para escritorio para mantener la tarjeta equilibrada */
-                min-height: 450px; 
+                min-height: 480px; 
             }
         }
 
         .image-box img {
-            /* ESTE ES EL CAMBIO CLAVE: object-fit contain asegura que se vea toda la foto sin recortes */
             width: 100%;
             height: 100%;
             object-fit: contain; 
@@ -85,7 +82,7 @@
 
         .content-box {
             flex: 1.4;
-            padding: 45px;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -114,12 +111,16 @@
         }
 
         .features-list {
-            margin: 25px 0;
+            margin: 20px 0;
             padding: 0;
             list-style: none;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .features-list { grid-template-columns: 1fr 1fr; }
         }
 
         .features-list li {
@@ -138,11 +139,17 @@
 
         .info-panel {
             display: flex;
-            gap: 30px;
-            margin-bottom: 35px;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
             padding: 20px;
             background: rgba(0, 212, 255, 0.05);
             border-radius: 12px;
+        }
+
+        .info-item {
+            flex: 1;
+            min-width: 140px;
         }
 
         .info-item span {
@@ -207,10 +214,56 @@
 <body>
 
     <div class="header">
-        <h1>Portafolio 2 de John Escobar</h1>
+        <h1>Portafolio de John Escobar</h1>
     </div>
 
     <div class="container">
+
+        <div class="project-card">
+            <div class="image-box">
+                <img src="foto cap1.jpg" alt="Zekkei Cap Cana">
+            </div>
+
+            <div class="content-box">
+                <span class="tag">Levantamiento de Capital</span>
+                <h2>ZEKKEI CAP CANA</h2>
+                
+                <div class="description">
+                    <p>
+                        Proyecto de desarrollo de condominio y hotel en Cap Cana, República Dominicana. Ofrece mucho más que una ubicación privilegiada: es un universo de confort, exclusividad y aventura al borde del mar Caribe. Rodeado por aguas turquesas y selvas exuberantes, este destino redefine el concepto de lujo tropical a solo minutos del Aeropuerto Internacional de Punta Cana.
+                    </p>
+                </div>
+
+                <ul class="features-list">
+                    <li>49 unidades CONDOHOTEL (Dos torres con potencial de expansión a 59 unidades)</li>
+                    <li>Plazo de entrega: 2 años y medio</li>
+                    <li>Excelentes tarifas en la mejor zona de CAP CANA</li>
+                    <li>Campos de golf de clase mundial e hípica internacional</li>
+                    <li>Premium Marina Access, parques acuáticos y diversión familiar</li>
+                </ul>
+
+                <div class="info-panel">
+                    <div class="info-item">
+                        <span>Inversión Requerida</span>
+                        <strong>$35,000,000 USD</strong>
+                    </div>
+                    <div class="info-item">
+                        <span>Valor del Lote</span>
+                        <strong>$5,000,000 USD</strong>
+                    </div>
+                    <div class="info-item">
+                        <span>Garantía</span>
+                        <strong>Lote del Proyecto</strong>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <a href="ZEKKEI1a.pdf" class="btn btn-pdf" target="_blank">Ver presentación del proyecto</a>
+                    <a href="https://www.zekkeiluxury.com" class="btn btn-web" target="_blank">Ver sitio web del proyecto</a>
+                </div>
+            </div>
+        </div>
+
         <div class="project-card">
             <div class="image-box">
                 <img src="foto.jpg" alt="Sistema Zentrix">
@@ -253,6 +306,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="footer">
