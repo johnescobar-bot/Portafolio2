@@ -68,10 +68,25 @@
             justify-content: center;
         }
 
+        .image-box-stacked {
+            flex: 1;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .image-box-stacked img {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
         @media (min-width: 850px) {
-            .image-box {
+            .image-box, .image-box-stacked {
                 max-width: 380px;
-                min-height: 340px; 
+                min-height: 380px;
             }
         }
 
@@ -91,9 +106,10 @@
         }
 
         h2 {
-            font-size: 1.6em;
+            font-size: 1.35em;
             margin: 0 0 8px 0;
             color: #fff;
+            line-height: 1.3;
         }
 
         .project-meta-top {
@@ -137,10 +153,6 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 6px;
-        }
-
-        @media (min-width: 650px) {
-            .features-list { grid-template-columns: 1fr 1fr; }
         }
 
         .features-list li {
@@ -282,6 +294,43 @@
                 <div class="actions">
                     <a href="ZEKKEI1a.pdf" class="btn btn-pdf" target="_blank">Ver presentación del proyecto</a>
                     <a href="https://www.zekkeiluxury.com" class="btn btn-web" target="_blank">Ver sitio web del proyecto</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="image-box-stacked">
+                <img src="Ricaurtefoto.jpg" alt="Complejo Ricaurte Vista 1">
+                <img src="Ricaurtefoto2.jpg" alt="Complejo Ricaurte Vista 2">
+            </div>
+
+            <div class="content-box">
+                <h2>Complejo Habitacional – Hotel, Apartamentos y Parque Acuático</h2>
+                
+                <div class="project-meta-top">
+                    <span class="tag">Levantamiento de Capital</span>
+                    <div class="investment-value">Valor de Inversión: <span>$176,000,000 USD</span></div>
+                </div>
+                
+                <div class="description">
+                    <p>
+                        Desarrollo de un ambicioso complejo turístico y habitacional en Ricaurte, Colombia. El proyecto contempla modernas torres de apartamentos, infraestructura hotelera de primer nivel y un altamente competitivo parque acuático diseñado para convertirse en el hito de entretenimiento y referencia inmobiliaria de toda la región.
+                    </p>
+                </div>
+
+                <div class="info-panel-mini">
+                    <div class="info-item-mini">
+                        <span>Ubicación</span>
+                        <strong>📍 Ricaurte, Colombia</strong>
+                    </div>
+                    <div class="info-item-mini">
+                        <span>Costo de Lotes</span>
+                        <strong>$22,000,000 USD</strong>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <a href="Presentacion RICAURTE.pdf" class="btn btn-pdf" target="_blank">Ver presentación del proyecto</a>
                 </div>
             </div>
         </div>
